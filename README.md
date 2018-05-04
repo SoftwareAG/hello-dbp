@@ -12,7 +12,7 @@ As you will discover from the videos, the structure of Hello DBP is a series of 
 [Sprint 1 - ](http://www.youtube.com)
 
 # Presentation
-The [HelloDBP Presentation](/presentation/Hello DBP Demo.ppt) is used across the video series.
+The [HelloDBP Presentation](/presentation/hello-dbp-presentation.pptx) is used across the video series.
 
 # Assets
 Coming soon. Target is June 1.
