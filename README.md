@@ -8,9 +8,7 @@ As you will discover from the videos, the structure of Hello DBP is a series of 
 
 # Videos
 
-[Introduction](http://www.youtube.com)
-
-[Sprint 1 - ](http://www.youtube.com)
+Coming soon.
 
 # Presentation
 The [Hello DBP Presentation](https://github.com/SoftwareAG/hello-dbp/raw/master/presentation/hello-dbp-presentation.pptx) is used across the video series.
