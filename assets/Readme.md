@@ -10,6 +10,12 @@
 - Link to Cloud Sensor App for iPhone (coming soon).
 - Link to [Cloud Sensor App Documentation](https://www.cumulocity.com/guides/users-guide/android-cloud-sensor-app/).
 - Link to [Cumulocity Cockpit Documentation](https://www.cumulocity.com/guides/users-guide/cockpit/).
+- Text for SmartRule to send a notification to a smart phone using the Cloud Sensor App:
+  - {
+  "c8y_Message": {
+    "text": "Slow down!"
+  }
+}
 
 ## Sprint 2 - Cumulocity and Integration Server
 
