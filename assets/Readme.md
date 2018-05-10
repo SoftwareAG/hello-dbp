@@ -1,4 +1,5 @@
 ## Common Utilities
+- _Software AG makes no warrantees for third party software and mentioning them here does not constitute an endorsement._
 - Link to [Air Server Software](http://www.airserver.com/), for mirroring an iPhone screen onto a Windows or Mac desktop. A free trial is available.
 - Link to [Ditto Clipboard Manager](https://sourceforge.net/projects/ditto-cp/), for managing your own collection of text snippets to allow for easily filling in text fields from named clipboard entries.
 
