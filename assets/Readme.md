@@ -10,7 +10,7 @@
 - Link to Cloud Sensor App for iPhone (coming soon).
 - Link to [Cloud Sensor App Documentation](https://www.cumulocity.com/guides/users-guide/android-cloud-sensor-app/).
 - Link to [Cumulocity Cockpit Documentation](https://www.cumulocity.com/guides/users-guide/cockpit/).
-- The built-in alarm keyword is `c8y_ThresholdAlarm
+- The built-in alarm keyword is `c8y_ThresholdAlarm`
 - Text for SmartRule to send a notification to a smart phone using the Cloud Sensor App:
 ```
 {
