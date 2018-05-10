@@ -12,8 +12,7 @@
 - Link to [Cumulocity Cockpit Documentation](https://www.cumulocity.com/guides/users-guide/cockpit/). You can save one of the Acceleration measurements as a Data Point into the library, and set thresholds. This is what it looks like after saving it.
 ![accelerationY Data Point](/images/AccelerationY_DataPoint.png)
 - The built-in alarm keyword is `c8y_ThresholdAlarm`. This is used in the second SmartRule.
-- Text for SmartRule to send a notification to a smart phone using the Cloud Sensor App:
-```
+- Text for SmartRule to send a notification to a smart phone using the Cloud Sensor App:```
 {
   "c8y_Message": {
     "text": "Slow down!"
