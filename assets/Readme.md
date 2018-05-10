@@ -9,8 +9,8 @@
 - Link to [Cloud Sensor App for Android](https://play.google.com/store/apps/details?id=com.cumulocity.cloudsensor&hl=en_US). But you also scan the QR code from the Cockpit "Add Smartphone" wizard.
 - Link to Cloud Sensor App for iPhone (coming soon).
 - Link to [Cloud Sensor App Documentation](https://www.cumulocity.com/guides/users-guide/android-cloud-sensor-app/).
-- Link to [Cumulocity Cockpit Documentation](https://www.cumulocity.com/guides/users-guide/cockpit/).
-- The built-in alarm keyword is `c8y_ThresholdAlarm`
+- Link to [Cumulocity Cockpit Documentation](https://www.cumulocity.com/guides/users-guide/cockpit/). You can save one of the Acceleration measurements as a Data Point into the library, and set thresholds.
+- The built-in alarm keyword is `c8y_ThresholdAlarm`. This is used in the second SmartRule.
 - Text for SmartRule to send a notification to a smart phone using the Cloud Sensor App:
 ```
 {
