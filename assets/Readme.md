@@ -28,3 +28,4 @@ To reproduce this sprint demo, you'll need the following:
 1. Integration Server with CloudStreams installed.
 1. Designer with Service Development plugins.
 1. Link to [Cumulocity Provider for CloudStreams](http://techcommunity.softwareag.com/ecosystem/communities/public/webmethods/products/cloudstreams/downloads/Cumulocity/index.html), follow instructions to install to IS.
+1. Download the lastest HelloDBP package from [IS](IS) folder.
