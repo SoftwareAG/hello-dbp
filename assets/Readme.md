@@ -45,6 +45,10 @@ To reproduce this sprint, you'll need the following, in addition to everything f
 1. Edit the HelloREST API Descriptor to adjust for your IS machine name and port:
 ![HelloREST](/images/HelloREST.png)
 1. _Warning: this HelloDBP package includes a Flow service called "HelloDBP.Utility:getSwagger", which in turn uses an unsupported IS built-in service. This is only for convenience in the demo. You can also save the swagger file to a file on disk and import into API Gateway, API Portal or Postman._
+1. Here is a sample json payload for a new Thing object:
+```
+{ "Thing" : { "Name" : "Thing 1", "Health" : 100, "Account" : "Account 1" } }
+```
 
 ## Sprint 5 - IS and Terracotta DB
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
