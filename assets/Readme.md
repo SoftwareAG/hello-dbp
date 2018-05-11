@@ -31,4 +31,4 @@ To reproduce this sprint demo, you'll need the following:
 1. Download and install the lastest HelloDBP package from [IS](IS) folder.
 1. From Designer Service Development, you'll also have to use File > Sync Document Types > All Out-of-Sync... to sync the two Digital Event Services types to the common repository.
 1. Disable and then edit the Cumulocity connector from IS Administration screens to change to your tenant URL, your username and password. It will look something like this:
-![accelerationY Data Point](/images/AccelerationY_DataPoint.png)
+![CumulocityConnector](/images/CumulocityConnector.png)
