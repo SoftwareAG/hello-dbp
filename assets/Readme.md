@@ -38,4 +38,9 @@ To reproduce this sprint, you'll need the following, in addition to everything f
 1. Terracotta DB and Terracotta DB IS Adapter installed, with license file configured.
 1. Manually create a new dataset called "Things", you can do that via the Terracotta DB IS Adapter administration.
 ![NewDataset](/images/NewDataset.png)
-1.
+
+## Sprint 4 - IS REST Services
+To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
+1. Edit the HelloREST API Descriptor to adjust for your IS machine name and port:
+![HelloREST](/images/HelloREST.png)
+
