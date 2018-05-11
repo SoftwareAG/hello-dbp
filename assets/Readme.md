@@ -2,6 +2,7 @@
 - _Software AG makes no warrantees for third party software and mentioning them here does not constitute an endorsement._
 - Link to [Air Server Software](http://www.airserver.com/), for mirroring an iPhone screen onto a Windows or Mac desktop. A free trial is available.
 - Link to [Ditto Clipboard Manager](https://sourceforge.net/projects/ditto-cp/), for managing your own collection of text snippets to allow for easily filling in text fields from named clipboard entries.
+- Lin to [Postman](https://www.getpostman.com/), to test APIs.
 
 ## Sprint 1 - Cumulocity Trial
 
@@ -43,4 +44,8 @@ To reproduce this sprint, you'll need the following, in addition to everything f
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
 1. Edit the HelloREST API Descriptor to adjust for your IS machine name and port:
 ![HelloREST](/images/HelloREST.png)
+1. _Warning: this HelloDBP package includes a Flow service called "HelloDBP.Utility:getSwagger", which in turn uses an unsupported IS built-in service. This is only for convenience in the demo. You can also save the swagger file to a file on disk and import into API Gateway, API Portal or Postman._
 
+## Sprint 5 - IS and Terracotta DB
+To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
+1. Terracotta DB and Terracotta DB IS Adapter installed, with license file configured.
