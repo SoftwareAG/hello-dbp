@@ -50,6 +50,13 @@ To reproduce this sprint, you'll need the following, in addition to everything f
 { "Thing" : { "Name" : "Thing 1", "Health" : 100, "Account" : "Account 1" } }
 ```
 
-## Sprint 5 - IS and Terracotta DB
+## Sprint 5 - IS and API Gateway
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
-1. Terracotta DB and Terracotta DB IS Adapter installed, with license file configured.
+1. API Gateway installed, which includes Event Data Store.
+1. To use the API Key policy, your calling applications must include the HTTP header key `x-Gateway-APIKey` and the actual key generated when creating the new application in API Gateway.
+
+## Sprint 6 - IS and API Portal
+To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
+1. API Portal installed.
+1. To enable publishing from Gateway to Portal, you must configure that in Gateway administration:
+![GatewayPortalConfig](/images/GatewayPortalConfig.png)
