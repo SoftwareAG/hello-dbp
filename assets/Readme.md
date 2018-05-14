@@ -1,3 +1,7 @@
+## Software AG Digital Business Platform
+- The base environment for Hello DBP is 10.1 GA, labeled _2017 October (Apama and webMethods 10.1, Terracotta 4.3/DB 10.1, Adabas, Natural)._
+- Be sure to use Software AG Update Manager to install the latest fixes.
+
 ## Common Utilities
 - _Software AG makes no warrantees for third party software and mentioning them here does not constitute an endorsement._
 - Link to [Air Server Software](http://www.airserver.com/), for mirroring an iPhone screen onto a Windows or Mac desktop. A free trial is available.
@@ -60,3 +64,12 @@ To reproduce this sprint, you'll need the following, in addition to everything f
 1. API Portal installed.
 1. To enable publishing from Gateway to Portal, you must configure that in Gateway administration:
 ![GatewayPortalConfig](/images/GatewayPortalConfig.png)
+
+## Sprint 7 - IS and Digital Event Services
+To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
+1. Digital Event Services and associated Designer plug-in installed.
+1. Universal Messaging installed.
+1. Integration Server Digital Event Services configured, e.g. the default configuration is:
+![DES_Config](/images/DES_Config.png)
+
+
