@@ -121,7 +121,7 @@ monitor HelloApama {
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
 - MashZone NextGen installed.
 - To import MashZone assets
-  - Go to folder MashZoneNG > prestocli > bin
+  - Go to folder MashZoneNG > prestocli > bin and run these commands:
   - `padmin importAlias -u (User) -w (Password) -f "(local git path)\HelloDBP\MashZone\Aliases.zip"`
   - `padmin importDashboard -u <User> -w <Password> -f "(local git path)\HelloDBP\MashZone\Dashboard.zip"`
   - Restart MashZone NextGen. This is needed for the Event Services to restart properly.
