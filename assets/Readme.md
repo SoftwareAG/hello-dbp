@@ -89,4 +89,24 @@ To reproduce this sprint, you'll need the following, in addition to everything f
 ## Sprint 9 - Digital Event Services and Apama
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
 1. Apama server, Platform Manager plugin for Apama, and Designer Application Development plugin installed.
-1. 
+1. The DES event types for ThingAlert and ThingEvent should already have been synchronized to the DES Event Type repository in the same suite folder as Apama.
+1. Here's the snippet of EPL code for the HelloApama.mon script:
+```
+using com.softwareag.connectivity.ConnectivityPlugins;
+
+monitor HelloApama {
+	action onload {
+		ConnectivityPlugins.onApplicationInitialized();
+		
+		monitor.subscribe( HelloDBP.HelloEvents.ThingEvent.CHANNEL );
+		
+		HelloDBP.HelloEvents.ThingEvent		thingEvent;
+		
+		on all HelloDBP.HelloEvents.ThingEvent() : thingEvent {
+			send thingEvent to "com.apama.queries";
+			log thingEvent.toString() at INFO;
+		}
+	}
+}
+```
+1. asdlkfj
