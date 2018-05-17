@@ -30,67 +30,67 @@
 ## Sprint 2 - Cumulocity and Integration Server
 
 To reproduce this sprint demo, you'll need the following:
-1. Your own or access to a shared Cumulocity tenant.
-1. Integration Server with CloudStreams installed.
-1. Designer with Service Development plugins.
-1. Link to [Cumulocity Provider for CloudStreams](http://techcommunity.softwareag.com/ecosystem/communities/public/webmethods/products/cloudstreams/downloads/Cumulocity/index.html), follow instructions to install to IS.
-1. Download and install the lastest HelloDBP package from [IS](IS) folder.
-1. From Designer Service Development, you'll also have to use File > Sync Document Types > All Out-of-Sync... to sync the two Digital Event Services types to the common repository.
-1. Disable and then edit the Cumulocity connector from IS Administration screens to change to your tenant URL, your username and password. It will look something like this:
+- Your own or access to a shared Cumulocity tenant.
+- Integration Server with CloudStreams installed.
+- Designer with Service Development plugins.
+- Link to [Cumulocity Provider for CloudStreams](http://techcommunity.softwareag.com/ecosystem/communities/public/webmethods/products/cloudstreams/downloads/Cumulocity/index.html), follow instructions to install to IS.
+- Download and install the lastest HelloDBP package from [IS](IS) folder.
+- From Designer Service Development, you'll also have to use File > Sync Document Types > All Out-of-Sync... to sync the two Digital Event Services types to the common repository.
+- Disable and then edit the Cumulocity connector from IS Administration screens to change to your tenant URL, your username and password. It will look something like this:
 ![CumulocityConnector](/images/CumulocityConnector.png)
 
 ## Sprint 3 - IS and Terracotta DB
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
-1. Terracotta DB and Terracotta DB IS Adapter installed, with license file configured.
-1. Manually create a new dataset called "Things", you can do that via the Terracotta DB IS Adapter administration.
+- Terracotta DB and Terracotta DB IS Adapter installed, with license file configured.
+- Manually create a new dataset called "Things", you can do that via the Terracotta DB IS Adapter administration.
 ![NewDataset](/images/NewDataset.png)
 
 ## Sprint 4 - IS REST Services
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
-1. Edit the HelloREST API Descriptor to adjust for your IS machine name and port:
+- Edit the HelloREST API Descriptor to adjust for your IS machine name and port:
 ![HelloREST](/images/HelloREST.png)
-1. _Warning: this HelloDBP package includes a Flow service called "HelloDBP.Utility:getSwagger", which in turn uses an unsupported IS built-in service. This is only for convenience in the demo. You can also save the swagger file to a file on disk and import into API Gateway, API Portal or Postman._
-1. Here is a sample json payload for a new Thing object:
+- _Warning: this HelloDBP package includes a Flow service called "HelloDBP.Utility:getSwagger", which in turn uses an unsupported IS built-in service. This is only for convenience in the demo. You can also save the swagger file to a file on disk and import into API Gateway, API Portal or Postman._
+- Here is a sample json payload for a new Thing object:
 ```
 { "Thing" : { "Name" : "Thing 1", "Health" : 100, "Account" : "Account 1" } }
 ```
 
 ## Sprint 5 - IS and API Gateway
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
-1. API Gateway installed, which includes Event Data Store.
-1. To use the API Key policy, your calling applications must include the HTTP header key `x-Gateway-APIKey` and the actual key generated when creating the new application in API Gateway.
+- API Gateway installed, which includes Event Data Store.
+- To use the API Key policy, your calling applications must include the HTTP header key `x-Gateway-APIKey` and the actual key generated when creating the new application in API Gateway.
 
 ## Sprint 6 - IS and API Portal
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
-1. API Portal installed.
-1. To enable publishing from Gateway to Portal, you must configure that in Gateway administration:
+- API Portal installed.
+- To enable publishing from Gateway to Portal, you must configure that in Gateway administration:
 ![GatewayPortalConfig](/images/GatewayPortalConfig.png)
 
 ## Sprint 7 - IS and Digital Event Services
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
-1. Digital Event Services (DES) and associated Designer plug-in installed.
-1. Command Central server, not necessarily on same machine or same suite folder.
-1. Platform Manager in same suite folder as Integration Server.
-1. Universal Messaging installed, including a Digital Event Service license.
-1. Integration Server Digital Event Services configured, e.g. the default configuration is:
+- Digital Event Services (DES) and associated Designer plug-in installed.
+- Command Central server, not necessarily on same machine or same suite folder.
+- Platform Manager in same suite folder as Integration Server.
+- Universal Messaging installed, including a Digital Event Service license.
+- Integration Server Digital Event Services configured, e.g. the default configuration is:
 ![DES_Config](/images/DES_Config.png)
 
 ## Sprint 8 - Digital Event Services and Digit Event Persistence
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
-1. Digital Event Persistence (DEP) Driver installed.
-1. JDBC Adapter installed on Integration Server.
-1. DEP Library jar file copied to JDBC Adapter code/jars folder.
-1. Event Data Store installed and running, or a supported Elasticsearch or Hadoop server with associated DES custom configuration.
-1. Integration Server Digital Event Services configured for Event Persistence, e.g. the default configuration is:
+- Digital Event Persistence (DEP) Driver installed.
+- JDBC Adapter installed on Integration Server.
+- DEP Library jar file copied to JDBC Adapter code/jars folder.
+- Event Data Store installed and running, or a supported Elasticsearch or Hadoop server with associated DES custom configuration.
+- Integration Server Digital Event Services configured for Event Persistence, e.g. the default configuration is:
 ![DEP_Config](/images/DEP_Config.png)
-1. Configure a DES Service Group to store to Elasticsearch in addition to publishing to Universal Messaging, e.g. the configuration for HelloDBP is:
+- Configure a DES Service Group to store to Elasticsearch in addition to publishing to Universal Messaging, e.g. the configuration for HelloDBP is:
 ![ServiceGroup_Config](/images/ServiceGroup_Config.png)
 
 ## Sprint 9 - Digital Event Services and Apama
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
-1. Apama server, Platform Manager plugin for Apama, and Designer Application Development plugin installed.
-1. The DES event types for ThingAlert and ThingEvent should already have been synchronized to the DES Event Type repository in the same suite folder as Apama.
-1. Here's the snippet of EPL code for the HelloApama.mon script:
+- Apama server, Platform Manager plugin for Apama, and Designer Application Development plugin installed.
+- The DES event types for ThingAlert and ThingEvent should already have been synchronized to the DES Event Type repository in the same suite folder as Apama.
+- Here's the snippet of EPL code for the HelloApama.mon script:
 ```
 using com.softwareag.connectivity.ConnectivityPlugins;
 
@@ -109,4 +109,4 @@ monitor HelloApama {
 	}
 }
 ```
-1. asdlkfj
+- asdlkfj
