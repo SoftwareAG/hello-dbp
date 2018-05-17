@@ -117,3 +117,11 @@ monitor HelloApama {
 ![Apama_Arguments](/images/Apama_Arguments.png)
 ![Apama_Initialization](/images/Apama_Initialization.png)
 
+## Sprint 10 - MashZone NextGen with DES, Terracotta DB and Event Persistence data sources
+To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
+- MashZone NextGen installed.
+- To import MashZone assets
+  - Go to folder MashZoneNG > prestocli > bin
+  - `padmin importAlias -u (User) -w (Password) -f "(local git path)\HelloDBP\MashZone\Aliases.zip"`
+  - `padmin importDashboard -u <User> -w <Password> -f "(local git path)\HelloDBP\MashZone\Dashboard.zip"`
+  - Restart MashZone NextGen. This is needed for the Event Services to restart properly.
