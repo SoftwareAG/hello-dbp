@@ -112,3 +112,7 @@ monitor HelloApama {
 - To build the query, these are the shortcuts:
   - Condition: `(t1.Health.toFloat() - t2.Health.toFloat()) / t1.Health.toFloat() >= 0.5`
   - Custom EPL Action: `send HelloDBP.HelloEvents.ThingAlert( t1.Id, "Thing '" + t1.Name + "' may be unhealthy.", t1.EventTime, "Normal", "", new sequence<integer> ) to HelloDBP.HelloEvents.ThingAlert.CHANNEL;`
+- Create a new Apama instance in Command Central, e.g. with settings like these:
+![Apama_Arguments](/images/Apama_Arguments.png)
+![Apama_Initialization](/images/Apama_Initialization.png)
+
