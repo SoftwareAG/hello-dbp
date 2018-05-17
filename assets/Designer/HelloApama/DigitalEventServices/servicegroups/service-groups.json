@@ -1,0 +1,5 @@
+{"service-groups":
+	{"service-group-name":"Default","service-group-description":"The default event group includes all event types that are not added to other defined groups",
+	"services":{"service-name":"UniversalMessaging","service-usage":"SourceAndDestination"}
+	}
+}

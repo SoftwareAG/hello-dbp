@@ -1,0 +1,26 @@
+//*****************************************************************************
+// Title:         HelloQuery
+// Description:   HelloQuery description
+// Dependencies:  None
+// Author:        jagt
+//
+//*****************************************************************************
+
+
+
+using HelloDBP.HelloEvents.ThingEvent;
+query HelloQuery {	
+	inputs  {
+		ThingEvent() key Id within 5 sec;
+
+	}
+
+	find ThingEvent as t1 -> ThingEvent as t2
+	where (t1.Health.toFloat() - t2.Health.toFloat()) / t1.Health.toFloat() >= 0.5  {
+
+	
+		%custom("title":"Custom EPL Action 1","description":"") {
+			send HelloDBP.HelloEvents.ThingAlert( t1.Id, "Thing '" + Things.getThingName(t1.Id) + "' may be unhealthy.", t1.EventTime, "Normal", "", new sequence<integer> ) to HelloDBP.HelloEvents.ThingAlert.CHANNEL;
+		}
+	}
+}

@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<view>
+  <property name='pageManagedBean' value='AnalyzeAlertViewDefaultviewView' />
+  <property name='preferencesBean' value='AnalyzeAlertView' />
+  <design-time-attribute name='taskTypeID' value='8F1E0ACC-B24C-DEA0-84AF-6DE85CD1C620' />
+  <design-time-attribute name='taskPortletType' value='taskView' />
+  <design-time-attribute name='portlet' value='AnalyzeAlertView' />
+  <control component-type='com.webmethods.caf.faces.command.CommandForm' renderer-type='com.webmethods.caf.faces.Form'>
+    <property name='defaultFocus' value='_first' />
+    <property name='id' value='taskViewForm' />
+    <control component-type='com.webmethods.caf.faces.output.ErrorMessages' renderer-type='com.webmethods.caf.faces.output.ErrorMessages'>
+      <design-time-attribute name='rolledUp' value='true' />
+      <property name='globalOnly' value='true' />
+    </control>
+    <control component-type='com.webmethods.caf.faces.panel.PropertyGroup' renderer-type='com.webmethods.caf.faces.panel.PropertySubGroup'>
+      <property name='id' value='taskDataSubGroup' />
+      <property name='label' value='ThingAlert' />
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine' />
+        <property name='label' value='Id' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <property name='id' value='htmlInputText' />
+          <property name='value' value='#{AnalyzeAlertViewDefaultviewView.analyzeAlert.taskData.thingAlert.id}' />
+          <property name='width' value='input20' />
+        </control>
+        <control component-type='javax.faces.HtmlOutputLink' renderer-type='com.webmethods.caf.faces.Link'>
+          <property name='id' value='htmlOutputLink' />
+          <property name='label' value='View Dashboard' />
+          <property name='value' value='http://localhost:5555/restv2/HelloIUG/thing/#{AnalyzeAlertViewDefaultviewView.analyzeAlert.taskData.thingAlert.id}' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine1' />
+        <property name='label' value='Alert' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <property name='id' value='htmlInputText1' />
+          <property name='value' value='#{AnalyzeAlertViewDefaultviewView.analyzeAlert.taskData.thingAlert.alert}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine2' />
+        <property name='label' value='Time' />
+        <control component-type='com.webmethods.caf.faces.input.DateInput' renderer-type='com.webmethods.caf.faces.input.DateInput'>
+          <converter converter-id='javax.faces.DateTime'>
+            <property name='pattern' value='#{user.profile[&quot;user.default.date.format&quot;]}' />
+          </converter>
+          <property name='id' value='dateInput' />
+          <property name='value' value='#{AnalyzeAlertViewDefaultviewView.analyzeAlert.taskData.thingAlert._time}' />
+          <property name='width' value='input6' />
+        </control>
+      </control>
+      <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+        <property name='id' value='propertyLine3' />
+        <property name='label' value='Severity' />
+        <control component-type='javax.faces.HtmlInputText' renderer-type='com.webmethods.caf.faces.Text'>
+          <property name='id' value='htmlInputText2' />
+          <property name='value' value='#{AnalyzeAlertViewDefaultviewView.analyzeAlert.taskData.thingAlert.severity}' />
+          <property name='width' value='input20' />
+        </control>
+      </control>
+    </control>
+    <control component-type='com.webmethods.caf.faces.toggle.OneWayToggleButton' renderer-type='com.webmethods.caf.faces.toggle.OneWayToggleButton'>
+      <design-time-attribute name='rolledUp' value='true' />
+      <property name='for' value=':taskViewForm:optionalPanel' />
+      <property name='rendered' value='false' />
+      <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.toggle.task.info&quot;]}' />
+    </control>
+    <control component-type='com.webmethods.caf.faces.panel.HideablePanel' renderer-type='com.webmethods.caf.faces.panel.HideablePanel'>
+      <design-time-attribute name='rolledUp' value='true' />
+      <property name='id' value='optionalPanel' />
+      <control component-type='com.webmethods.caf.faces.panel.PropertyGroup' renderer-type='com.webmethods.caf.faces.panel.PropertySubGroup'>
+        <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.task.info&quot;]}' />
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.name&quot;]}' />
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <property name='id' value='nameText' />
+            <property name='value' value='#{AnalyzeAlertViewDefaultviewView.analyzeAlert.taskInfo.name}' />
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.description&quot;]}' />
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <property name='id' value='descriptionText' />
+            <property name='value' value='#{AnalyzeAlertViewDefaultviewView.analyzeAlert.taskInfo.description}' />
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.created.on&quot;]}' />
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <converter converter-id='com.webmethods.caf.faces.converter.FormattedDateTime'>
+              <property name='displayTime' value='true' />
+              <property name='pattern' value='#{portletUserAttributes[&quot;user.default.date.format&quot;]}' />
+              <property name='patternTime' value='#{portletUserAttributes[&quot;user.default.time.format&quot;]}' />
+              <property name='timePrecision' value='0' />
+              <property name='timeZone' value='#{portletUserAttributes[&quot;user.default.time_zone&quot;]}' />
+            </converter>
+            <property name='value' value='#{AnalyzeAlertViewDefaultviewView.analyzeAlert.taskInfo.createdDate}' />
+          </control>
+          <control component-type='javax.faces.HtmlOutputFormat' renderer-type='com.webmethods.caf.faces.Format'>
+            <property name='id' value='htmlOutputFormat1' />
+            <property name='style' value='padding-left: 0.5em;&#13;&#10;' />
+            <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.by&quot;]}' />
+            <control component-type='javax.faces.Parameter' renderer-type=''>
+              <property name='value' value='#{AnalyzeAlertViewDefaultviewView.taskDisplayProvider.createdByDisplayName}' />
+            </control>
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.last.modified&quot;]}' />
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <converter converter-id='com.webmethods.caf.faces.converter.FormattedDateTime'>
+              <property name='displayTime' value='true' />
+              <property name='pattern' value='#{portletUserAttributes[&quot;user.default.date.format&quot;]}' />
+              <property name='patternTime' value='#{portletUserAttributes[&quot;user.default.time.format&quot;]}' />
+              <property name='timePrecision' value='0' />
+              <property name='timeZone' value='#{portletUserAttributes[&quot;user.default.time_zone&quot;]}' />
+            </converter>
+            <property name='value' value='#{AnalyzeAlertViewDefaultviewView.analyzeAlert.taskInfo.lastModifiedDate}' />
+          </control>
+          <control component-type='javax.faces.HtmlOutputFormat' renderer-type='com.webmethods.caf.faces.Format'>
+            <property name='id' value='htmlOutputFormat2' />
+            <property name='style' value='padding-left:0.5em' />
+            <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.by&quot;]}' />
+            <control component-type='javax.faces.Parameter' renderer-type=''>
+              <property name='value' value='#{AnalyzeAlertViewDefaultviewView.taskDisplayProvider.lastModifiedDisplayName}' />
+            </control>
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.expires&quot;]}' />
+          <control component-type='javax.faces.HtmlOutputText' renderer-type='com.webmethods.caf.faces.Text'>
+            <converter converter-id='com.webmethods.caf.faces.converter.FormattedDateTime'>
+              <property name='displayTime' value='true' />
+              <property name='pattern' value='#{portletUserAttributes[&quot;user.default.date.format&quot;]}' />
+              <property name='patternTime' value='#{portletUserAttributes[&quot;user.default.time.format&quot;]}' />
+              <property name='timePrecision' value='0' />
+              <property name='timeZone' value='#{portletUserAttributes[&quot;user.default.time_zone&quot;]}' />
+            </converter>
+            <property name='value' value='#{AnalyzeAlertViewDefaultviewView.analyzeAlert.taskInfo.expireDate}' />
+          </control>
+        </control>
+        <control component-type='com.webmethods.caf.faces.panel.PropertyLine' renderer-type='com.webmethods.caf.faces.panel.PropertyLine'>
+          <property name='label' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.status&quot;]}' />
+          <control component-type='com.webmethods.caf.faces.select.SelectOneOutput' renderer-type='com.webmethods.caf.faces.select.SelectOneOutput'>
+            <property name='id' value='statusText' />
+            <property name='value' value='#{AnalyzeAlertViewDefaultviewView.analyzeAlert.taskInfo.status}' />
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='activeStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.active&quot;]}' />
+              <property name='itemValue' value='active' />
+            </control>
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='cancelledStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.canceled&quot;]}' />
+              <property name='itemValue' value='cancelled' />
+            </control>
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='completedStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.completed&quot;]}' />
+              <property name='itemValue' value='completed' />
+            </control>
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='errorStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.error&quot;]}' />
+              <property name='itemValue' value='error' />
+            </control>
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='expiredStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.expired&quot;]}' />
+              <property name='itemValue' value='expired' />
+            </control>
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='suspendedStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.suspended&quot;]}' />
+              <property name='itemValue' value='suspended' />
+            </control>
+            <control component-type='javax.faces.SelectItem' renderer-type=''>
+              <property name='id' value='scheduledStatusItem' />
+              <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.scheduled&quot;]}' />
+              <property name='itemValue' value='scheduled' />
+            </control>
+          </control>
+        </control>
+      </control>
+    </control>
+    <control component-type='com.webmethods.caf.faces.panel.PropertySubmit' renderer-type='com.webmethods.caf.faces.panel.PropertySubmit'>
+      <design-time-attribute name='rolledUp' value='true' />
+      <facet name='submit'>
+        <control component-type='com.webmethods.caf.faces.command.async.Button' renderer-type='com.webmethods.caf.faces.command.async.Button'>
+          <property name='action' value='#{AnalyzeAlertViewDefaultviewView.submitTask}' signature='java.lang.String action()' />
+          <property name='disabled' value='#{not AnalyzeAlertViewDefaultviewView.taskDisplayProvider.activeStatus}' />
+          <property name='rendered' value='#{AnalyzeAlertViewDefaultviewView.analyzeAlert.autoAccept || AnalyzeAlertViewDefaultviewView.analyzeAlert.taskInfo.currentUserAccepted}' />
+          <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.submit&quot;]}' />
+        </control>
+      </facet>
+      <facet name='cancel'>
+        <control component-type='javax.faces.HtmlCommandButton' renderer-type='com.webmethods.caf.faces.Button'>
+          <property name='action' value='#{AnalyzeAlertViewDefaultviewView.cancelView}' signature='java.lang.String action()' />
+          <property name='rendered' value='#{not empty activePreferencesBean.finishUrl}' />
+          <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.return&quot;]}' />
+        </control>
+      </facet>
+      <facet name='previous'>
+        <control component-type='com.webmethods.caf.faces.command.async.Button' renderer-type='com.webmethods.caf.faces.command.async.Button'>
+          <property name='action' value='#{AnalyzeAlertViewDefaultviewView.analyzeAlert.acceptTask}' signature='java.lang.String action()' />
+          <property name='disabled' value='#{not AnalyzeAlertViewDefaultviewView.taskDisplayProvider.activeStatus}' />
+          <property name='rendered' value='#{!AnalyzeAlertViewDefaultviewView.analyzeAlert.autoAccept &amp;&amp; !AnalyzeAlertViewDefaultviewView.analyzeAlert.taskInfo.currentUserAccepted}' />
+          <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.accept&quot;]}' />
+        </control>
+      </facet>
+      <facet name='next'>
+        <control component-type='com.webmethods.caf.faces.command.async.Button' renderer-type='com.webmethods.caf.faces.command.async.Button'>
+          <property name='action' value='#{AnalyzeAlertViewDefaultviewView.analyzeAlert.unacceptTask}' signature='java.lang.String action()' />
+          <property name='disabled' value='#{not AnalyzeAlertViewDefaultviewView.taskDisplayProvider.activeStatus}' />
+          <property name='rendered' value='#{!AnalyzeAlertViewDefaultviewView.analyzeAlert.autoAccept &amp;&amp; AnalyzeAlertViewDefaultviewView.analyzeAlert.taskInfo.currentUserAccepted}' />
+          <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.release&quot;]}' />
+        </control>
+      </facet>
+      <control component-type='javax.faces.HtmlCommandButton' renderer-type='com.webmethods.caf.faces.Button'>
+        <property name='action' value='#{AnalyzeAlertViewDefaultviewView.completeTask}' signature='java.lang.String action()' />
+        <property name='disabled' value='#{not AnalyzeAlertViewDefaultviewView.taskDisplayProvider.activeStatus}' />
+        <property name='rendered' value='#{AnalyzeAlertViewDefaultviewView.analyzeAlert.autoAccept || AnalyzeAlertViewDefaultviewView.analyzeAlert.taskInfo.currentUserAccepted}' />
+        <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.complete&quot;]}' />
+      </control>
+      <control component-type='com.webmethods.caf.faces.toggle.OneWayToggleButton' renderer-type='com.webmethods.caf.faces.toggle.OneWayToggleButton'>
+        <property name='disabled' value='#{not AnalyzeAlertViewDefaultviewView.taskDisplayProvider.activeStatus}' />
+        <property name='for' value=':assignToForm:assignedPrincipalPicker' />
+        <property name='id' value='toggleAssignedPrincipalPicker' />
+        <property name='rendered' value='#{AnalyzeAlertViewDefaultviewView.analyzeAlert.adhocRouting}' />
+        <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.assign.users&quot;]}' />
+        <property name='way' value='show' />
+      </control>
+    </control>
+  </control>
+  <control component-type='com.webmethods.caf.faces.command.CommandForm' renderer-type='com.webmethods.caf.faces.Form'>
+    <property name='defaultFocus' value='_first' />
+    <property name='id' value='assignToForm' />
+    <property name='rendered' value='#{AnalyzeAlertViewDefaultviewView.analyzeAlert.adhocRouting}' />
+    <control component-type='com.softwareag.caf.controls.mwsx.PeoplePickerDialog' renderer-type=''>
+      <design-time-attribute name='rolledUp' value='true' />
+      <property name='applyButtonActionExpression' value='#{AnalyzeAlertViewDefaultviewView.assignToPrincipals}' signature='java.lang.String action()' />
+      <property name='groupSearchAllowed' value='false' />
+      <property name='id' value='assignedPrincipalPicker' />
+      <property name='lazy' value='' />
+      <property name='progressDelay' value='' />
+      <property name='refreshOnShow' value='' />
+      <property name='suppressInputs' value='' />
+      <property name='targetValue' value='#{AnalyzeAlertViewDefaultviewView.principalList}' />
+      <property name='twoPass' value='' />
+      <facet name='popupPanel'>
+        <control component-type='javax.faces.NamingContainer' renderer-type=''>
+          <property name='id' value='assignTargetPickerPopup' />
+          <control component-type='com.webmethods.caf.faces.command.async.Link' renderer-type='com.webmethods.caf.faces.command.async.Link'>
+            <property name='id' value='showAvailability' />
+            <property name='onclick' value='CAF.Popup.hideAll();' />
+            <property name='refresh' value='personCalendarDialog' />
+            <property name='toggle' value='personCalendarDialog' />
+            <property name='value' value='#{activePreferencesBean.portletResourcesProvider[&quot;view.task.show.availability&quot;]}' />
+            <control component-type='javax.faces.Parameter' renderer-type=''>
+              <property name='name' value='personURI' />
+              <property name='value' value='#{row.principalURI}' />
+            </control>
+          </control>
+        </control>
+      </facet>
+    </control>
+    <control component-type='com.softwareag.caf.controls.mwsx.PersonCalendarDialog' renderer-type=''>
+      <property name='id' value='personCalendarDialog' />
+      <property name='personURI' value='#{param.personURI}' />
+    </control>
+  </control>
+</view>

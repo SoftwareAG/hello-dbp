@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<view>
+  <property name="pageManagedBean" value="AnalyzeAlertOverviewDefaultviewView" />
+  <property name="preferencesBean" value="AnalyzeAlertOverview" />
+  <design-time-attribute name="portlet" value="AnalyzeAlertOverview" />
+  <design-time-attribute name="taskTypeID" value="8F1E0ACC-B24C-DEA0-84AF-6DE85CD1C620" />
+  <design-time-attribute name="taskPortletType" value="taskOverview" />
+
+  <control component-type='com.webmethods.caf.faces.output.ErrorMessages' renderer-type='com.webmethods.caf.faces.output.ErrorMessages'>
+  </control>
+  <control component-type='com.webmethods.caf.faces.command.CommandForm' renderer-type='com.webmethods.caf.faces.Form'>
+    <property name='defaultFocus' value='_first' />
+    <property name='id' value='taskOverviewTabsForm' />
+    <control component-type='com.webmethods.caf.faces.toggle.ToggleTabs' renderer-type='com.webmethods.caf.faces.toggle.ToggleTabs'>
+      <property name='id' value='taskviewselect' />
+      <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlertOverview.currentTab}' />
+      <control component-type='javax.faces.SelectItem' renderer-type=''>
+        <property name='id' value='TaskDataOption' />
+        <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;start.dialog.data.view&quot;]}' />
+        <property name='itemValue' value='TaskData' />
+        <property name='rendered' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlert.canUserViewTaskData}' />
+      </control>
+      
+
+	  
+	   
+	      <control component-type='javax.faces.SelectItem' renderer-type=''>
+	        <property name='id' value='taskDetailsViewOption' />
+	        <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;start.dialog.details.view&quot;]}' />
+	        <property name='itemValue' value='taskDetailsView' />
+	        <property name='rendered' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlert.canUserViewTaskInfo}' />
+	      </control>
+	  
+	   
+	      <control component-type='javax.faces.SelectItem' renderer-type=''>
+        	<property name='id' value='taskAuditViewOption' />
+        	<property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;start.dialog.audit.view&quot;]}' />
+        	<property name='itemValue' value='taskAuditView' />
+        	<property name='rendered' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlert.canUserViewTaskAudit}' />
+      	</control>
+	  
+	   
+	      <control component-type='javax.faces.SelectItem' renderer-type=''>
+	        <property name='id' value='taskCommentsViewOption' />
+	        <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;start.dialog.comments&quot;]}' />
+	        <property name='itemValue' value='taskCommentsView' />
+	        <property name='rendered' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlert.canUserViewTaskComments and AnalyzeAlertOverviewDefaultviewView.taskDisplayProvider.commentingEnabled}' />
+	      </control>
+	  
+	   
+	      <control component-type='javax.faces.SelectItem' renderer-type=''>
+	        <property name='id' value='taskCollabViewOption' />
+	        <property name='itemLabel' value='#{activePreferencesBean.portletResourcesProvider[&quot;start.dialog.collaboration&quot;]}' />
+	        <property name='itemValue' value='taskCollabView' />
+	        <property name='rendered' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlert.canUserViewCollaboration and AnalyzeAlertOverviewDefaultviewView.taskDisplayProvider.collaborationEnabled}' />
+	      </control>
+	  
+    </control>
+    <control component-type='com.webmethods.caf.faces.behavior.RaiseOnChange' renderer-type='com.webmethods.caf.faces.behavior.RaiseOnChange'>
+	    <property name='command' value='taskOverviewTabsForm:updateCurrentTab' />
+	    <property name='for' value='taskOverviewTabsForm:taskviewselect' />
+	    <property name='id' value='raiseOnChange' />
+  	</control>
+    <control component-type='com.webmethods.caf.faces.panel.HideablePanel' renderer-type='com.webmethods.caf.faces.panel.HideablePanel'>
+	    <property name='id' value='blockPanel' />
+	    <property name='progressDelay' value='9999' />
+	    <property name='progressFlashOnComplete' value='false' />
+	    <control component-type='com.webmethods.caf.faces.command.async.Hidden' renderer-type='com.webmethods.caf.faces.command.async.Hidden'>
+	      <property name='id' value='updateCurrentTab' />
+	      <property name='refresh' value='taskOverviewTabsForm:blockPanel' />
+	    </control>
+	</control>
+  </control>
+  <control component-type='javax.faces.HtmlPanelGroup' renderer-type='com.webmethods.caf.faces.panel.BlockPanel'>
+    <property name='id' value='taskTabViewsBlock' />
+	<control component-type='com.webmethods.caf.faces.panel.HideablePanel' renderer-type='com.webmethods.caf.faces.panel.HideablePanel'>
+      <design-time-attribute name='rolledUp' value='false' />
+      <property name='id' value='TaskData' />
+	  <property name='progressFlashOnComplete' value='false' />
+	  <property name='refreshOnShow' value='true' />
+	  <property name='lazy' value='true' />
+      <property name='rendered' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlert.canUserViewTaskData}' />
+      <control component-type='com.webmethods.caf.faces.component.portlet.PortletInclude' renderer-type='com.webmethods.caf.faces.render.html.output.PortletIncludeRenderer'>
+        <property name='id' value='taskDataPortletInclude' />
+        <property name='portlet' value='8F1E0ACC-B24C-DEA0-84AF-6DE85CD1C620.task.app.details.view.portlet' />
+        <control component-type='javax.faces.Parameter' renderer-type=''>
+          <property name='name' value='taskID' />
+          <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlertOverview.taskID}' />
+        </control>
+        <control component-type='javax.faces.Parameter' renderer-type=''>
+          <property name='name' value='cancelUrl' />
+          <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlertOverview.cancelUrl}' />
+        </control>
+        <control component-type='javax.faces.Parameter' renderer-type=''>
+          <property name='name' value='finishUrl' />
+          <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlertOverview.finishUrl}' />
+        </control>
+        <control component-type='javax.faces.Parameter' renderer-type=''>
+          <property name='name' value='requestID' />
+          <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.requestID}' />
+        </control>
+      </control>
+    </control>
+	     
+	    <control component-type='com.webmethods.caf.faces.panel.HideablePanel' renderer-type='com.webmethods.caf.faces.panel.HideablePanel'>
+	      <design-time-attribute name='rolledUp' value='false' />
+	      <property name='id' value='taskAuditView' />
+		  <property name='progressFlashOnComplete' value='false' />
+		  <property name='lazy' value='true' />
+	  	  <property name='refreshOnShow' value='true' />
+	      <property name='rendered' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlert.canUserViewTaskAudit}' />
+	      <control component-type='com.webmethods.caf.faces.component.portlet.PortletInclude' renderer-type='com.webmethods.caf.faces.render.html.output.PortletIncludeRenderer'>
+	        <property name='id' value='portletURL' />
+	        <property name='portlet' value='/portlet/wm_task_search___taskauditview' />
+	        <control component-type='javax.faces.Parameter' renderer-type=''>
+	          <property name='name' value='taskID' />
+	          <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlertOverview.taskID}' />
+	        </control>
+	        <control component-type='javax.faces.Parameter' renderer-type=''>
+	          <property name='name' value='finishUrl' />
+	          <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlertOverview.finishUrl}' />
+	        </control>
+	        <control component-type='javax.faces.Parameter' renderer-type=''>
+	          <property name='name' value='requestID' />
+	          <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.requestID}' />
+	        </control>
+	      </control>
+	    </control>
+	
+	     
+		<control component-type='com.webmethods.caf.faces.panel.HideablePanel' renderer-type='com.webmethods.caf.faces.panel.HideablePanel'>
+	      <design-time-attribute name='rolledUp' value='false' />
+	      <property name='id' value='taskDetailsView' />
+		  <property name='progressFlashOnComplete' value='false' />
+		  <property name='lazy' value='true' />
+		  <property name='refreshOnShow' value='true' />
+	      <property name='rendered' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlert.canUserViewTaskInfo}' />
+	      <control component-type='com.webmethods.caf.faces.component.portlet.PortletInclude' renderer-type='com.webmethods.caf.faces.render.html.output.PortletIncludeRenderer'>
+	        <design-time-attribute name='rolledUp' value='false' />
+	        <property name='id' value='taskDetailsViewInclude' />
+	        <property name='portlet' value='/portlet/wm_task_search___taskinfoview' />
+	        <control component-type='javax.faces.Parameter' renderer-type=''>
+	          <property name='name' value='taskID' />
+	          <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlertOverview.taskID}' />
+	        </control>
+	        <control component-type='javax.faces.Parameter' renderer-type=''>
+	          <property name='name' value='finishUrl' />
+	          <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlertOverview.finishUrl}' />
+	        </control>
+	        <control component-type='javax.faces.Parameter' renderer-type=''>
+	          <property name='name' value='requestID' />
+	          <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.requestID}' />
+	        </control>
+	      </control>
+	    </control>
+	
+	     
+	    <control component-type='com.webmethods.caf.faces.panel.HideablePanel' renderer-type='com.webmethods.caf.faces.panel.HideablePanel'>
+	      <design-time-attribute name='rolledUp' value='false' />
+	      <property name='id' value='taskCommentsView' />
+		  <property name='progressFlashOnComplete' value='false' />
+		  <property name='lazy' value='true' />
+		  <property name='refreshOnShow' value='true' />
+	      <property name='rendered' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlert.canUserViewTaskComments and AnalyzeAlertOverviewDefaultviewView.taskDisplayProvider.commentingEnabled}' />
+	      <control component-type='com.webmethods.caf.faces.component.portlet.PortletInclude' renderer-type='com.webmethods.caf.faces.render.html.output.PortletIncludeRenderer'>
+	        <property name='id' value='taskCommentsViewInclude' />
+	        <property name='portlet' value='/portlet/wm_comments_editor___commentseditor' />
+	        <control component-type='javax.faces.Parameter' renderer-type=''>
+	          <property name='name' value='commentsContainerID' />
+	          <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlertOverview.taskID}' />
+	        </control>
+	        <control component-type='javax.faces.Parameter' renderer-type=''>
+	          <property name='name' value='forTask' />
+	          <property name='value' value='true' />
+	        </control>
+	        <control component-type='javax.faces.Parameter' renderer-type=''>
+    	      <property name='name' value='finishUrl' />
+        	  <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlertOverview.finishUrl}' />
+        	</control>
+	        <control component-type='javax.faces.Parameter' renderer-type=''>
+	          <property name='name' value='requestID' />
+	          <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.requestID}' />
+	        </control>
+	      </control>
+	    </control>
+	
+	     
+	    <control component-type='com.webmethods.caf.faces.panel.HideablePanel' renderer-type='com.webmethods.caf.faces.panel.HideablePanel'>
+	      <design-time-attribute name='rolledUp' value='false' />
+	      <property name='id' value='taskCollabView' />
+		  <property name='progressFlashOnComplete' value='false' />
+		  <property name='lazy' value='true' />
+		  <property name='refreshOnShow' value='true' />
+	      <property name='rendered' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlert.canUserViewCollaboration and AnalyzeAlertOverviewDefaultviewView.taskDisplayProvider.collaborationEnabled}' />
+	      <control component-type='com.webmethods.caf.faces.component.portlet.PortletInclude' renderer-type='com.webmethods.caf.faces.render.html.output.PortletIncludeRenderer'>
+	        <property name='id' value='taskCollabViewInclude' />
+	        <property name='portlet' value='/portlet/wm_task_search___taskprocess' />
+	        <control component-type='javax.faces.Parameter' renderer-type=''>
+	          <property name='name' value='taskID' />
+	          <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlertOverview.taskID}' />
+	        </control>
+	        <control component-type='javax.faces.Parameter' renderer-type=''>
+    	      <property name='name' value='finishUrl' />
+        	  <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.analyzeAlertOverview.finishUrl}' />
+        	</control>
+	        <control component-type='javax.faces.Parameter' renderer-type=''>
+	          <property name='name' value='requestID' />
+	          <property name='value' value='#{AnalyzeAlertOverviewDefaultviewView.requestID}' />
+	        </control>
+	      </control>
+	    </control>
+	
+	
+  </control>
+</view>
+
+

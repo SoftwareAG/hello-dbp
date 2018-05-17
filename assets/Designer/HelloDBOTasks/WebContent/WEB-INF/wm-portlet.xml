@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wm-portlet-app version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.webmethods.com/schema/wm-portlet-app.xsd">
+	<wm-portlet>
+		<portlet-name>AnalyzeAlertView</portlet-name>
+		<category>HelloDBOTasks</category>
+	<portlet-preferences>
+		<preference>
+			<name>taskID</name>
+			<display-name>Task ID</display-name>
+			<description></description>
+			<scope>content</scope>
+			<hidden>true</hidden>
+			<type>String</type>
+		</preference>
+		<preference>
+			<name>cancelUrl</name>
+			<display-name>Cancel URL</display-name>
+			<description></description>
+			<scope>content</scope>
+			<hidden>true</hidden>
+			<type>String</type>
+		</preference>
+		<preference>
+			<name>finishUrl</name>
+			<display-name>Finish URL</display-name>
+			<description></description>
+			<scope>content</scope>
+			<hidden>true</hidden>
+			<type>String</type>
+		</preference></portlet-preferences></wm-portlet>
+	<wm-portlet>
+		<portlet-name>AnalyzeAlertOverview</portlet-name>
+		<category>HelloDBOTasks</category>
+	<portlet-preferences>
+		<preference>
+			<name>taskID</name>
+			<display-name>Task ID</display-name>
+			<description></description>
+			<scope>content</scope>
+			<hidden>true</hidden>
+			<type>String</type>
+		</preference>
+		<preference>
+			<name>cancelUrl</name>
+			<display-name>Cancel URL</display-name>
+			<description></description>
+			<scope>content</scope>
+			<hidden>true</hidden>
+			<type>String</type>
+		</preference>
+		<preference>
+			<name>finishUrl</name>
+			<display-name>Finish URL</display-name>
+			<description></description>
+			<scope>content</scope>
+			<hidden>true</hidden>
+			<type>String</type>
+		</preference>
+		<preference>
+			<name>currentTab</name>
+			<display-name>Current Tab</display-name>
+			<description></description>
+			<scope>content</scope>
+			<hidden>true</hidden>
+			<type>String</type>
+		</preference></portlet-preferences></wm-portlet></wm-portlet-app>
+

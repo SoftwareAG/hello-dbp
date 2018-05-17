@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<apama-project>
+	<dependency>
+		<dependencyentry path="" kind="src"/>
+	</dependency>
+	<catalogs>
+		<catalog path="catalogs/Generated scenario blocks" type="block"/>
+		<catalog path="catalogs/HelloApama blocks" type="block"/>
+		<catalog path="catalogs/HelloApama functions" type="function"/>
+	</catalogs>
+	<bundles>
+		<bundle file="DigitalEvents.bnd" origin-path="" origin="CONNECTIVITY_CATALOG">
+			<config-files>
+			</config-files>
+			<bundle-instance-files>
+				<file name="../bundles/DigitalEvents/DESConnectivity.yaml" timestamp="1520989694369"/>
+				<file name="../bundles/DigitalEvents/EventTypeList.apamades" timestamp="1518129402369"/>
+				<file name="../bundles/DigitalEvents/DESConnectivity.properties" timestamp="1520989694369"/>
+			</bundle-instance-files>
+			<static-files>
+			</static-files>
+			<dashboard-files>
+			</dashboard-files>
+			<evt-files>
+			</evt-files>
+		</bundle>
+		<bundle file="QuerySupport.bnd" origin-path="" origin="PRODUCT_CATALOG">
+			<instance name=""/>
+			<config-files>
+			</config-files>
+			<bundle-instance-files>
+			</bundle-instance-files>
+			<static-files>
+			</static-files>
+			<dashboard-files>
+			</dashboard-files>
+			<evt-files>
+				<file name="${APAMA_HOME}/monitors/query_support/AllQueriesInjected.evt" timestamp="1520901710729"/>
+			</evt-files>
+		</bundle>
+		<bundle file="DistributedMemoryStore.bnd" origin-path="" origin="ADAPTER_CATALOG">
+			<instance name="instance"/>
+			<config-files>
+			</config-files>
+			<bundle-instance-files>
+				<file name="..\..\config/distributedcache.settings" timestamp="1520901709200"/>
+			</bundle-instance-files>
+			<static-files>
+			</static-files>
+			<dashboard-files>
+			</dashboard-files>
+			<evt-files>
+			</evt-files>
+		</bundle>
+	</bundles>
+</apama-project>

@@ -1,0 +1,7 @@
+{
+	"storage-location": "Default",
+	"default-on-disk-capacity": "1000000",
+	"default-in-memory-capacity": "1000",
+	"sync-batch-size": "100",
+	"sync-timeout": "500"
+}

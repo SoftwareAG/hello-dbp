@@ -1,0 +1,34 @@
+# $Copyright (c) 2016-2017 Software AG, Darmstadt, Germany and/or Software AG USA Inc., Reston, VA, USA, and/or its subsidiaries and/or its affiliates and/or their licensors.$
+# Use, reproduction, transfer, publication or disclosure is prohibited except as specifically provided for in your License Agreement with Software AG
+
+###########################################################################################
+# Connectivity plug-in configuration for correlator <-> Digital Event Services connectivity
+#
+# This configuration file should not be modified by a user. All user-accessible
+# configuration is available and documented in the properties file.
+###########################################################################################
+
+connectivityPlugins:
+  DES:
+    directory: ${APAMA_HOME}/lib
+    classpath: des-transport.jar
+    class: com.apama.digitalevents.DigitalEventServicesChainManager
+
+dynamicChainManagers:
+  DES:
+    transport: DES
+    managerConfig:
+      log4jConfigFile: ${APAMA_HOME}/etc/digital-event-services-log4j.properties
+      replaceConfigWithRNAME: ${DigitalEventServices_replaceConfigWithRNAME}
+      configDir: ${DigitalEventServices_configDir}
+      reliableMessaging:
+        subscriberId: ${DigitalEventServices_reliability_subscriberId}
+        maxUnacknowledgedEvents: ${DigitalEventServices_reliability_maxUnacknowledgedEvents}
+
+
+dynamicChains:
+  DES:
+    - apama.eventMap:
+        suppressLoopback: true
+        allowMissing: false
+    - DES

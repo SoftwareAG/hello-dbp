@@ -1,0 +1,23 @@
+{
+	"serviceName": "local-EventDataStore",
+	"serviceDescription": "Default Event Data Store (Elasticsearch 2.3.2) configuration.",
+	"serviceType": "ELASTICSEARCH 2.3.2",
+	"eventTypeStoreLocation": "default",
+	"elasticSearchServerURI" : "elasticsearch://localhost:9340",
+	"elasticSearchServerUser" : "evsuser",
+	"elasticSearchServerPassword" : "ENC(9A9xfW5fo0vf2oDOSs6soXg8A==)",
+	"elasticSearchClusterName" : "SAG_EventDataStore",
+	"elasticSearchIndexName" : "default_index",
+	"elasticSearchBatchSize" : "1000",
+	"elasticSearchBatchWriteTimerSec" : "15",
+	"elasticSearchCoreThreadPoolSize" : "5",
+	"elasticSearchMaximumThreadPoolSize" : "10",
+	"elasticSearchThreadPoolKeepAliveTime" : "5",
+	"elasticSearchThreadPoolQueueSize" : "10",
+	"elasticSearchPreStartCoreThreads" : "false",
+	"elasticSearchKeyStoreFilePath" : "",
+	"elasticSearchTrustStoreFilePath" : "", 
+	"elasticSearchKeyStorePassword" : "",
+	"elasticSearchTrustStorePassword": "",
+	"elasticSearchSSLEnabled" : "false"
+}

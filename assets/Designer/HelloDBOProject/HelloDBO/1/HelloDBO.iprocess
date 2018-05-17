@@ -1,0 +1,441 @@
+{
+  "@class" : ".ModelDef",
+  "modelIdentifier" : {
+    "@class" : ".ModelIdentifier",
+    "projectName" : "HelloDBOProject",
+    "modelName" : "HelloDBO",
+    "modelVersion" : "1"
+  },
+  "productVersion" : "10.1",
+  "displayName" : "HelloDBO",
+  "originId" : -564522394,
+  "steps" : [ {
+    "@class" : ".CallActivityGoto",
+    "id" : "S9999",
+    "label" : "GotoCallActivity"
+  }, {
+    "@class" : ".ExclusiveGateway",
+    "id" : "S7",
+    "location" : {
+      "@class" : ".Location",
+      "x" : 468,
+      "y" : 86
+    },
+    "size" : {
+      "@class" : ".Size",
+      "width" : 35,
+      "height" : 35
+    },
+    "label" : "",
+    "labelLayout" : {
+      "@class" : ".LabelLayout",
+      "defaultLocation" : true,
+      "font" : {
+        "@class" : ".Font",
+        "family" : "Arial",
+        "color" : {
+          "@class" : ".Color",
+          "red" : 0,
+          "green" : 0,
+          "blue" : 0
+        },
+        "size" : 8
+      }
+    }
+  }, {
+    "@class" : ".ServiceTask",
+    "id" : "S11",
+    "location" : {
+      "@class" : ".Location",
+      "x" : 672,
+      "y" : 73
+    },
+    "size" : {
+      "@class" : ".Size",
+      "width" : 93,
+      "height" : 61
+    },
+    "label" : "createThingAlertCase",
+    "dataSpecification" : {
+      "@class" : ".DataSpecification",
+      "inputs" : [ "ThingAlert", "HelloDBP.HelloEvents:ThingAlert" ]
+    },
+    "inputMap" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<IDataXMLCoder version=\"1.0\">\n  <record javaclass=\"com.wm.data.ISMemDataImpl\">\n    <value name=\"type\">ROOT</value>\n    <null name=\"label\"/>\n    <list name=\"nodes\">\n      <record javaclass=\"com.wm.util.Values\">\n        <value name=\"comment\"></value>\n        <value name=\"type\">MAP</value>\n        <list name=\"nodes\">\n          <record javaclass=\"com.wm.util.Values\">\n            <value name=\"type\">MAPCOPY</value>\n            <value name=\"from\">/ThingAlert;4;0;HelloDBP.HelloEvents:ThingAlert</value>\n            <value name=\"to\">/HelloDBP.HelloEvents:ThingAlert;4;0;HelloDBP.HelloEvents:ThingAlert</value>\n            <null name=\"condition\"/>\n            <null name=\"condition-disabled\"/>\n          </record>\n        </list>\n        <value name=\"timeout\"></value>\n        <value name=\"mode\">STANDALONE</value>\n        <value name=\"source\">\n\n&lt;Values version=\"2.0\"&gt;\n  &lt;record name=\"xml\" javaclass=\"com.wm.util.Values\"&gt;\n    &lt;value name=\"node_type\"&gt;record&lt;/value&gt;\n    &lt;value name=\"node_subtype\"&gt;unknown&lt;/value&gt;\n    &lt;value name=\"is_public\"&gt;false&lt;/value&gt;\n    &lt;value name=\"field_type\"&gt;record&lt;/value&gt;\n    &lt;value name=\"field_dim\"&gt;0&lt;/value&gt;\n    &lt;value name=\"wrapper_type\"&gt;IData&lt;/value&gt;\n    &lt;value name=\"nillable\"&gt;true&lt;/value&gt;\n    &lt;value name=\"form_qualified\"&gt;false&lt;/value&gt;\n    &lt;value name=\"is_global\"&gt;false&lt;/value&gt;\n    &lt;array name=\"rec_fields\" type=\"record\" depth=\"1\"&gt;\n      &lt;record javaclass=\"com.wm.util.Values\"&gt;\n        &lt;value name=\"node_type\"&gt;record&lt;/value&gt;\n        &lt;value name=\"node_subtype\"&gt;unknown&lt;/value&gt;\n        &lt;value name=\"is_public\"&gt;false&lt;/value&gt;\n        &lt;value name=\"field_name\"&gt;ThingAlert&lt;/value&gt;\n        &lt;value name=\"field_type\"&gt;recref&lt;/value&gt;\n        &lt;value name=\"field_dim\"&gt;0&lt;/value&gt;\n        &lt;value name=\"nillable\"&gt;true&lt;/value&gt;\n        &lt;value name=\"form_qualified\"&gt;false&lt;/value&gt;\n        &lt;value name=\"is_global\"&gt;false&lt;/value&gt;\n        &lt;value name=\"modifiable\"&gt;true&lt;/value&gt;\n        &lt;value name=\"rec_ref\"&gt;HelloDBP.HelloEvents:ThingAlert&lt;/value&gt;\n      &lt;/record&gt;\n      &lt;record javaclass=\"com.wm.util.Values\"&gt;\n        &lt;value name=\"node_type\"&gt;record&lt;/value&gt;\n        &lt;value name=\"node_subtype\"&gt;unknown&lt;/value&gt;\n        &lt;value name=\"is_public\"&gt;false&lt;/value&gt;\n        &lt;value name=\"field_name\"&gt;ProcessInfo&lt;/value&gt;\n        &lt;value name=\"field_type\"&gt;recref&lt;/value&gt;\n        &lt;value name=\"field_dim\"&gt;0&lt;/value&gt;\n        &lt;value name=\"wrapper_type\"&gt;IData&lt;/value&gt;\n        &lt;value name=\"nillable\"&gt;true&lt;/value&gt;\n        &lt;value name=\"form_qualified\"&gt;false&lt;/value&gt;\n        &lt;value name=\"is_global\"&gt;false&lt;/value&gt;\n        &lt;value name=\"modifiable\"&gt;true&lt;/value&gt;\n        &lt;value name=\"rec_ref\"&gt;pub.dbo:ProcessInfo&lt;/value&gt;\n      &lt;/record&gt;\n    &lt;/array&gt;\n    &lt;value name=\"modifiable\"&gt;true&lt;/value&gt;\n  &lt;/record&gt;\n&lt;/Values&gt;\n</value>\n        <value name=\"target\">\n\n&lt;Values version=\"2.0\"&gt;\n  &lt;record name=\"xml\" javaclass=\"com.wm.util.Values\"&gt;\n    &lt;value name=\"node_type\"&gt;record&lt;/value&gt;\n    &lt;value name=\"node_subtype\"&gt;unknown&lt;/value&gt;\n    &lt;value name=\"is_public\"&gt;false&lt;/value&gt;\n    &lt;value name=\"field_type\"&gt;record&lt;/value&gt;\n    &lt;value name=\"field_dim\"&gt;0&lt;/value&gt;\n    &lt;value name=\"wrapper_type\"&gt;IData&lt;/value&gt;\n    &lt;value name=\"nillable\"&gt;true&lt;/value&gt;\n    &lt;value name=\"form_qualified\"&gt;false&lt;/value&gt;\n    &lt;value name=\"is_global\"&gt;false&lt;/value&gt;\n    &lt;array name=\"rec_fields\" type=\"record\" depth=\"1\"&gt;\n      &lt;record javaclass=\"com.wm.util.Values\"&gt;\n        &lt;value name=\"node_type\"&gt;record&lt;/value&gt;\n        &lt;value name=\"node_subtype\"&gt;unknown&lt;/value&gt;\n        &lt;value name=\"is_public\"&gt;false&lt;/value&gt;\n        &lt;value name=\"field_name\"&gt;ThingAlert&lt;/value&gt;\n        &lt;value name=\"field_type\"&gt;recref&lt;/value&gt;\n        &lt;value name=\"field_dim\"&gt;0&lt;/value&gt;\n        &lt;value name=\"nillable\"&gt;true&lt;/value&gt;\n        &lt;value name=\"form_qualified\"&gt;false&lt;/value&gt;\n        &lt;value name=\"is_global\"&gt;false&lt;/value&gt;\n        &lt;value name=\"modifiable\"&gt;true&lt;/value&gt;\n        &lt;value name=\"rec_ref\"&gt;HelloDBP.HelloEvents:ThingAlert&lt;/value&gt;\n      &lt;/record&gt;\n      &lt;record javaclass=\"com.wm.util.Values\"&gt;\n        &lt;value name=\"node_type\"&gt;record&lt;/value&gt;\n        &lt;value name=\"node_subtype\"&gt;unknown&lt;/value&gt;\n        &lt;value name=\"is_public\"&gt;false&lt;/value&gt;\n        &lt;value name=\"field_name\"&gt;ProcessInfo&lt;/value&gt;\n        &lt;value name=\"field_type\"&gt;recref&lt;/value&gt;\n        &lt;value name=\"field_dim\"&gt;0&lt;/value&gt;\n        &lt;value name=\"wrapper_type\"&gt;IData&lt;/value&gt;\n        &lt;value name=\"nillable\"&gt;true&lt;/value&gt;\n        &lt;value name=\"form_qualified\"&gt;false&lt;/value&gt;\n        &lt;value name=\"is_global\"&gt;false&lt;/value&gt;\n        &lt;value name=\"modifiable\"&gt;true&lt;/value&gt;\n        &lt;value name=\"rec_ref\"&gt;pub.dbo:ProcessInfo&lt;/value&gt;\n      &lt;/record&gt;\n      &lt;record javaclass=\"com.wm.util.Values\"&gt;\n        &lt;value name=\"node_type\"&gt;record&lt;/value&gt;\n        &lt;value name=\"node_subtype\"&gt;unknown&lt;/value&gt;\n        &lt;value name=\"is_public\"&gt;false&lt;/value&gt;\n        &lt;value name=\"field_name\"&gt;HelloDBP.HelloEvents:ThingAlert&lt;/value&gt;\n        &lt;value name=\"field_type\"&gt;recref&lt;/value&gt;\n        &lt;value name=\"field_dim\"&gt;0&lt;/value&gt;\n        &lt;value name=\"nillable\"&gt;true&lt;/value&gt;\n        &lt;value name=\"form_qualified\"&gt;false&lt;/value&gt;\n        &lt;value name=\"is_global\"&gt;false&lt;/value&gt;\n        &lt;value name=\"modifiable\"&gt;true&lt;/value&gt;\n        &lt;value name=\"rec_ref\"&gt;HelloDBP.HelloEvents:ThingAlert&lt;/value&gt;\n      &lt;/record&gt;\n    &lt;/array&gt;\n    &lt;value name=\"modifiable\"&gt;true&lt;/value&gt;\n  &lt;/record&gt;\n&lt;/Values&gt;\n</value>\n      </record>\n    </list>\n    <value name=\"version\">3.0</value>\n    <value name=\"cleanup\">true</value>\n    <null name=\"parentWsd\"/>\n  </record>\n</IDataXMLCoder>\n",
+    "labelLayout" : {
+      "@class" : ".LabelLayout",
+      "defaultLocation" : true,
+      "font" : {
+        "@class" : ".Font",
+        "family" : "Arial",
+        "color" : {
+          "@class" : ".Color",
+          "red" : 0,
+          "green" : 0,
+          "blue" : 0
+        },
+        "size" : 8
+      }
+    },
+    "serviceName" : "HelloDBP.HelloDynamicApps:createThingAlertCase"
+  }, {
+    "@class" : ".EndNoneEvent",
+    "id" : "S9",
+    "description" : "",
+    "location" : {
+      "@class" : ".Location",
+      "x" : 472,
+      "y" : 247
+    },
+    "size" : {
+      "@class" : ".Size",
+      "width" : 27,
+      "height" : 27
+    },
+    "label" : "Ignore Alert",
+    "labelLayout" : {
+      "@class" : ".LabelLayout",
+      "defaultLocation" : true,
+      "font" : {
+        "@class" : ".Font",
+        "family" : "Arial",
+        "color" : {
+          "@class" : ".Color",
+          "red" : 0,
+          "green" : 0,
+          "blue" : 0
+        },
+        "size" : 8
+      }
+    }
+  }, {
+    "@class" : ".UserTask",
+    "id" : "S4",
+    "description" : "",
+    "location" : {
+      "@class" : ".Location",
+      "x" : 242,
+      "y" : 73
+    },
+    "size" : {
+      "@class" : ".Size",
+      "width" : 93,
+      "height" : 61
+    },
+    "label" : "Analyze Alert",
+    "dataSpecification" : {
+      "@class" : ".DataSpecification",
+      "inputs" : [ "TaskQueueInfo", "ThingAlert" ],
+      "outputs" : [ "ThingAlert", "TaskCompletionInfo" ]
+    },
+    "labelLayout" : {
+      "@class" : ".LabelLayout",
+      "defaultLocation" : true,
+      "font" : {
+        "@class" : ".Font",
+        "family" : "Arial",
+        "color" : {
+          "@class" : ".Color",
+          "red" : 0,
+          "green" : 0,
+          "blue" : 0
+        },
+        "size" : 8
+      }
+    },
+    "taskTypeId" : "8F1E0ACC-B24C-DEA0-84AF-6DE85CD1C620"
+  }, {
+    "@class" : ".StartMessageEvent",
+    "id" : "S3",
+    "description" : "",
+    "location" : {
+      "@class" : ".Location",
+      "x" : 83,
+      "y" : 90
+    },
+    "size" : {
+      "@class" : ".Size",
+      "width" : 27,
+      "height" : 27
+    },
+    "label" : "Receive Alert",
+    "dataSpecification" : {
+      "@class" : ".DataSpecification",
+      "outputs" : [ "ThingAlert" ]
+    },
+    "labelLayout" : {
+      "@class" : ".LabelLayout",
+      "defaultLocation" : true,
+      "font" : {
+        "@class" : ".Font",
+        "family" : "Arial",
+        "color" : {
+          "@class" : ".Color",
+          "red" : 0,
+          "green" : 0,
+          "blue" : 0
+        },
+        "size" : 8
+      }
+    },
+    "dataItemName" : "ThingAlert",
+    "transportInfoSet" : [ {
+      "@class" : ".TransportInfoNative"
+    } ]
+  } ],
+  "sequenceFlows" : [ {
+    "@class" : ".ConditionalSequenceFlow",
+    "id" : "T10",
+    "sourceStepId" : "S7",
+    "targetStepId" : "S9",
+    "lineColor" : {
+      "@class" : ".Color",
+      "red" : 0,
+      "green" : 0,
+      "blue" : 255
+    },
+    "lineShape" : "STRAIGHT",
+    "sourceLocation" : {
+      "@class" : ".Location",
+      "x" : 485,
+      "y" : 121
+    },
+    "targetLocation" : {
+      "@class" : ".Location",
+      "x" : 485,
+      "y" : 247
+    },
+    "bendpoints" : [ {
+      "@class" : ".Location",
+      "x" : 485,
+      "y" : 184
+    }, {
+      "@class" : ".Location",
+      "x" : 485,
+      "y" : 184
+    } ],
+    "labelLayout" : {
+      "@class" : ".LabelLayout",
+      "location" : {
+        "@class" : ".Location",
+        "x" : 492,
+        "y" : 176
+      },
+      "size" : {
+        "@class" : ".Size",
+        "width" : 140,
+        "height" : 14
+      },
+      "font" : {
+        "@class" : ".Font",
+        "family" : "Arial",
+        "color" : {
+          "@class" : ".Color",
+          "red" : 0,
+          "green" : 0,
+          "blue" : 0
+        },
+        "size" : 8
+      }
+    },
+    "conditions" : [ {
+      "@class" : ".ConditionExpression",
+      "leftFieldDataItemName" : "ThingAlert",
+      "leftFieldPath" : "Severity",
+      "operator" : "EQUALS",
+      "rightFieldConstant" : "Normal",
+      "chainOperator" : "NULL"
+    } ],
+    "conditionText" : "ThingAlert/Severity = Normal "
+  }, {
+    "@class" : ".SequenceFlow",
+    "id" : "T6",
+    "sourceStepId" : "S3",
+    "targetStepId" : "S4",
+    "lineColor" : {
+      "@class" : ".Color",
+      "red" : 0,
+      "green" : 0,
+      "blue" : 255
+    },
+    "lineShape" : "STRAIGHT",
+    "sourceLocation" : {
+      "@class" : ".Location",
+      "x" : 110,
+      "y" : 103
+    },
+    "targetLocation" : {
+      "@class" : ".Location",
+      "x" : 242,
+      "y" : 103
+    },
+    "bendpoints" : [ {
+      "@class" : ".Location",
+      "x" : 176,
+      "y" : 103
+    }, {
+      "@class" : ".Location",
+      "x" : 176,
+      "y" : 103
+    } ],
+    "labelLayout" : {
+      "@class" : ".LabelLayout",
+      "defaultLocation" : true,
+      "font" : {
+        "@class" : ".Font",
+        "family" : "Arial",
+        "color" : {
+          "@class" : ".Color",
+          "red" : 0,
+          "green" : 0,
+          "blue" : 0
+        },
+        "size" : 8
+      }
+    }
+  }, {
+    "@class" : ".ConditionalSequenceFlow",
+    "id" : "T12",
+    "sourceStepId" : "S7",
+    "targetStepId" : "S11",
+    "lineColor" : {
+      "@class" : ".Color",
+      "red" : 0,
+      "green" : 0,
+      "blue" : 255
+    },
+    "lineShape" : "STRAIGHT",
+    "sourceLocation" : {
+      "@class" : ".Location",
+      "x" : 503,
+      "y" : 103
+    },
+    "targetLocation" : {
+      "@class" : ".Location",
+      "x" : 672,
+      "y" : 103
+    },
+    "bendpoints" : [ {
+      "@class" : ".Location",
+      "x" : 586,
+      "y" : 103
+    }, {
+      "@class" : ".Location",
+      "x" : 586,
+      "y" : 103
+    } ],
+    "labelLayout" : {
+      "@class" : ".LabelLayout",
+      "location" : {
+        "@class" : ".Location",
+        "x" : 517,
+        "y" : 86
+      },
+      "size" : {
+        "@class" : ".Size",
+        "width" : 139,
+        "height" : 14
+      },
+      "font" : {
+        "@class" : ".Font",
+        "family" : "Arial",
+        "color" : {
+          "@class" : ".Color",
+          "red" : 0,
+          "green" : 0,
+          "blue" : 0
+        },
+        "size" : 8
+      }
+    },
+    "conditions" : [ {
+      "@class" : ".ConditionExpression",
+      "leftFieldDataItemName" : "ThingAlert",
+      "leftFieldPath" : "Severity",
+      "operator" : "EQUALS",
+      "rightFieldConstant" : "Critical",
+      "chainOperator" : "NULL"
+    } ],
+    "conditionText" : "ThingAlert/Severity = Critical "
+  }, {
+    "@class" : ".SequenceFlow",
+    "id" : "T8",
+    "sourceStepId" : "S4",
+    "targetStepId" : "S7",
+    "lineColor" : {
+      "@class" : ".Color",
+      "red" : 0,
+      "green" : 0,
+      "blue" : 255
+    },
+    "lineShape" : "STRAIGHT",
+    "sourceLocation" : {
+      "@class" : ".Location",
+      "x" : 335,
+      "y" : 103
+    },
+    "targetLocation" : {
+      "@class" : ".Location",
+      "x" : 468,
+      "y" : 103
+    },
+    "bendpoints" : [ {
+      "@class" : ".Location",
+      "x" : 400,
+      "y" : 103
+    }, {
+      "@class" : ".Location",
+      "x" : 400,
+      "y" : 103
+    } ],
+    "labelLayout" : {
+      "@class" : ".LabelLayout",
+      "defaultLocation" : true,
+      "font" : {
+        "@class" : ".Font",
+        "family" : "Arial",
+        "color" : {
+          "@class" : ".Color",
+          "red" : 0,
+          "green" : 0,
+          "blue" : 0
+        },
+        "size" : 8
+      }
+    }
+  } ],
+  "dataItems" : [ {
+    "@class" : ".DataItem",
+    "name" : "HelloDBP.HelloEvents:ThingAlert",
+    "type" : "DOCREF",
+    "docRefType" : "HelloDBP.HelloEvents:ThingAlert",
+    "description" : ""
+  }, {
+    "@class" : ".DataItem",
+    "name" : "ProcessInfo",
+    "type" : "DOCREF",
+    "docRefType" : "pub.dbo:ProcessInfo",
+    "description" : ""
+  }, {
+    "@class" : ".DataItem",
+    "name" : "TaskQueueInfo",
+    "type" : "DOCREF",
+    "docRefType" : "pub.task:TaskQueueInfo",
+    "description" : ""
+  }, {
+    "@class" : ".DataItem",
+    "name" : "ThingAlert",
+    "type" : "DOCREF",
+    "docRefType" : "HelloDBP.HelloEvents:ThingAlert",
+    "description" : ""
+  }, {
+    "@class" : ".DataItem",
+    "name" : "TaskCompletionInfo",
+    "type" : "DOCREF",
+    "docRefType" : "pub.task:TaskCompletionInfo",
+    "description" : ""
+  } ],
+  "creator" : "jagt",
+  "designLogicalServer" : "Default",
+  "labelsBelow" : true,
+  "flowLabelPref" : "EXPRESSION"
+}

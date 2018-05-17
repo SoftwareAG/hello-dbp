@@ -1,0 +1,16 @@
+using com.softwareag.connectivity.ConnectivityPlugins;
+
+monitor HelloApama {
+	action onload {
+		ConnectivityPlugins.onApplicationInitialized();
+		
+		monitor.subscribe( HelloDBP.HelloEvents.ThingEvent.CHANNEL );
+		
+		HelloDBP.HelloEvents.ThingEvent		thingEvent;
+		
+		on all HelloDBP.HelloEvents.ThingEvent() : thingEvent {
+			send thingEvent to "com.apama.queries";
+			log thingEvent.toString() at INFO;
+		}
+	}
+}

@@ -1,0 +1,65 @@
+//*****************************************************************************
+// Title:         HelloTerracotta
+// Description:   HelloTerracotta description
+// Dependencies:  None
+// Author:        Administrator
+//
+//*****************************************************************************
+using com.apama.memorystore.Storage;
+using com.apama.memorystore.Store;
+using com.apama.memorystore.Finished;
+using com.apama.memorystore.Table;
+using com.apama.memorystore.Row;
+
+/*
+	This event definition would normally be put into it's own file in the Apama project.
+	Including inline here for simplicity.
+*/
+
+event Things {
+	string				Id;
+	string				Name;
+	integer				Value;
+
+	constant string     STORE	:= "HelloDBP";
+	constant string     DATASET	:= "Things";
+
+	static action getThingName( string key ) returns string
+	{
+		Things			thing := <Things> Storage.open( STORE ).open( DATASET ).get( key ).toAny();
+
+		return thing.Name;
+	}
+
+	static action createThing( string key, Things value )
+	{
+		Table			dataset := Storage.open( STORE ).open( DATASET );
+		Row 			newRow := dataset.add( key );
+		newRow.setAll( value );
+		newRow.commit();
+	}
+}
+
+monitor HelloTerracotta {
+	Finished			f;
+	integer				id;
+    Store               tcStore;
+    Table				thingsTable;
+    
+	action onload {
+		// Initialize the Terracotta Store (requires Terracotta server to be running).
+		// This is executed once at start time to initialize the TCDB Store.
+
+		on Finished( id = Storage.prepareDistributed( Things.STORE ) ) : f {
+			if not f.success then {
+				log "Terracotta DB connection not successful: " + f.status at INFO;
+			}
+			tcStore := Storage.open( Things.STORE );
+			
+			on Finished( id = tcStore.prepareFromAny( new Things ) ) as f {
+				thingsTable := tcStore.open( Things.DATASET );
+				//Things.createThing( "100", Things("100", "Apama Thing", 100));
+			}
+		}
+	}
+}

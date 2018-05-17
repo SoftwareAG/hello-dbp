@@ -1,0 +1,4 @@
+#EventTypeList.apamades 10.1.0.4
+#This is an internal file and is not user-editable.
+HelloDBP.HelloEvents.ThingEvent,3a7f054a2ff2335a,SELECTED
+HelloDBP.HelloEvents.ThingAlert,3a443e488cdebd4f,SELECTED

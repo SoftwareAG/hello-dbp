@@ -1,0 +1,13 @@
+{
+    "Messaging":
+    {
+        "@alias":"UniversalMessaging",
+        "Description":"The pre-installed UniversalMessaging service",
+        "Enabled":"true",
+        "Provider":
+        {
+            "@type":"UM",
+            "URL":"nsp://localhost:9000"
+        }
+    }
+}
