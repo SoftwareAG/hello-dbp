@@ -67,9 +67,18 @@ To reproduce this sprint, you'll need the following, in addition to everything f
 
 ## Sprint 7 - IS and Digital Event Services
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
-1. Digital Event Services and associated Designer plug-in installed.
-1. Universal Messaging installed.
+1. Digital Event Services (DES) and associated Designer plug-in installed.
+1. Command Central server, not necessarily on same machine or same suite folder.
+1. Platform Manager in same suite folder as Integration Server.
+1. Universal Messaging installed, including a Digital Event Service license.
 1. Integration Server Digital Event Services configured, e.g. the default configuration is:
 ![DES_Config](/images/DES_Config.png)
 
-
+## Sprint 8 - Digital Event Services and Digit Event Persistence
+To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
+1. Digital Event Persistence (DEP) Driver installed.
+1. JDBC Adapter installed on Integration Server.
+1. DEP Library jar file copied to JDBC Adapter code/jars folder.
+1. Event Data Store installed and running, or a supported Elasticsearch or Hadoop server with associated DES custom configuration.
+1. Integration Server Digital Event Services configured for Event Persistence, e.g. the default configuration is:
+![DEP_Config](/images/DEP_Config.png)
