@@ -83,3 +83,10 @@ To reproduce this sprint, you'll need the following, in addition to everything f
 1. Event Data Store installed and running, or a supported Elasticsearch or Hadoop server with associated DES custom configuration.
 1. Integration Server Digital Event Services configured for Event Persistence, e.g. the default configuration is:
 ![DEP_Config](/images/DEP_Config.png)
+1. Configure a DES Service Group to store to Elasticsearch in addition to publishing to Universal Messaging, e.g. the configuration for HelloDBP is:
+![ServiceGroup_Config](/images/ServiceGroup_Config.png)
+
+## Sprint 9 - Digital Event Services and Apama
+To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
+1. Apama server, Platform Manager plugin for Apama, and Designer Application Development plugin installed.
+1. 
