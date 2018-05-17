@@ -125,3 +125,10 @@ To reproduce this sprint, you'll need the following, in addition to everything f
   - `padmin importAlias -u <User> -w <Password> -f "<local git path>\hello-dbp\assets\MashZone\Aliases.zip"`
   - `padmin importDashboard -u <User> -w <Password> -f "<local git path>\hello-dbp\assets\MashZone\Dashboard.zip"`
   - Restart MashZone NextGen. This is needed for the Event Services to restart properly.
+
+## Sprint 11 - IS and AgileApps
+To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
+- AgileApps installed locally or an AgileApps tenant in the public cloud.
+- In the IS package called HelloDBP, edit the HelloDynamicApps > handleThingAlert trigger and enable it.
+- In the IS service called HelloDynamicApps > createThingAlertCase, edit the Flow second MAP step to set your userid and password, e.g.:
+![AgileApps_CreateCase](/images/AgileApps_CreateCase.png)
