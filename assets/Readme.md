@@ -115,4 +115,4 @@ monitor HelloApama {
 - Create a new Apama instance in Command Central, e.g. with settings like these:
 ![Apama_Arguments](/images/Apama_Arguments.png)
 ![Apama_Initialization](/images/Apama_Initialization.png)
-
+- The full Apama project can be found at [HelloApama](/assets/Designer/HelloApama).
