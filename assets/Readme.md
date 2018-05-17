@@ -132,3 +132,11 @@ To reproduce this sprint, you'll need the following, in addition to everything f
 - In the IS package called HelloDBP, edit the HelloDynamicApps > handleThingAlert trigger and enable it.
 - In the IS service called HelloDynamicApps > createThingAlertCase, edit the Flow second MAP step to set your userid and password, e.g.:
 ![AgileApps_CreateCase](/images/AgileApps_CreateCase.png)
+
+## Sprint 12 - Dynamic Business Orchestrator and AgileApps
+To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
+- Dynamic Business Orchestrator IS package installed plus Designer plugin for DBO and My webMethods User Interface for DBO.
+- The full DBO project can be found at [HelloDBOProject](/assets/Designer/HelloDBOProject) and [HelloDBOTasks](/assets/Designer/HelloDBOTasks). These can be imported into Designer.
+- After importing the Designer project, you could open the HelloDBO process and click "Upload for Dynamic Process".
+- If you want to create the process from scratch, make it look like this:
+![DBO_Process](/images/DBO_Process.png)
