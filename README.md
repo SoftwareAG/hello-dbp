@@ -17,4 +17,4 @@ The [Hello DBP Presentation](https://github.com/SoftwareAG/hello-dbp/raw/master/
 If you want to see under the hood, at the DBP assets that make up this demo, plus hints for how to develop HelloDBP from scratch, refer to the [Hello DBP Assets](/assets) folder.
 
 # Questions or Feedback
-We are eager to hear if this demo / tutorial was helpful and how it can be improved or extended. Feel free to email us at [hellodbp@softwareag.com](mailto:hellodbp@softwareag.com).
+We are eager to hear if Hello DBP was helpful and how it can be improved or extended. Feel free to email us at [hellodbp@softwareag.com](mailto:hellodbp@softwareag.com).
