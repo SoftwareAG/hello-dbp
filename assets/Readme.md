@@ -140,3 +140,4 @@ To reproduce this sprint, you'll need the following, in addition to everything f
 - After importing the Designer project, you could open the HelloDBO process and click "Upload for Dynamic Process".
 - If you want to create the process from scratch, make it look like this:
 ![DBO_Process](/images/DBO_Process.png)
+- Link to [Mobile Business Console App for iPhone](https://itunes.apple.com/us/app/webmethods-business-console/id1081041133) or [Mobile Business Console App for Android](https://play.google.com/store/apps/details?id=com.softwareag.mobile.mobilebusinessconsole2)
