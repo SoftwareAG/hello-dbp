@@ -90,6 +90,7 @@ To reproduce this sprint, you'll need the following, in addition to everything f
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
 - Apama server, Platform Manager plugin for Apama, and Designer Application Development plugin installed.
 - The DES event types for ThingAlert and ThingEvent should already have been synchronized to the DES Event Type repository in the same suite folder as Apama.
+- The full Apama project can be found at [HelloApama](/assets/Designer/HelloApama).
 - Here's the snippet of EPL code for the HelloApama.mon script:
 ```
 using com.softwareag.connectivity.ConnectivityPlugins;
@@ -115,4 +116,4 @@ monitor HelloApama {
 - Create a new Apama instance in Command Central, e.g. with settings like these:
 ![Apama_Arguments](/images/Apama_Arguments.png)
 ![Apama_Initialization](/images/Apama_Initialization.png)
-- The full Apama project can be found at [HelloApama](/assets/Designer/HelloApama).
+
