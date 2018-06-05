@@ -38,7 +38,7 @@ To reproduce this sprint demo, you'll need the following:
 - From Designer Service Development, you'll also have to use File > Sync Document Types > All Out-of-Sync... to sync the two Digital Event Services types to the common repository.
 - Disable and then edit the Cumulocity connector from IS Administration screens to change to your tenant URL, your username and password. It will look something like this:
 ![CumulocityConnector](/images/CumulocityConnector.png)
-- You'll also have to create the Terracotta DB dataset Things using the instructions in Sprint 3.
+- You'll also have to go through the steps for configuring Terracotta DB described in the next section.
 
 ## Sprint 3 - IS and Terracotta DB
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
