@@ -63,7 +63,7 @@ To reproduce this sprint, you'll need the following, in addition to everything f
 
 ## Sprint 6 - IS and API Portal
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
-- API Portal installed.
+- API Portal installed and running.
 - To enable publishing from Gateway to Portal, you must configure that in Gateway administration:
 ![GatewayPortalConfig](/images/GatewayPortalConfig.png)
 
