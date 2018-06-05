@@ -33,8 +33,8 @@ To reproduce this sprint demo, you'll need the following:
 - Your own or access to a shared Cumulocity tenant.
 - Integration Server with CloudStreams installed.
 - Designer with Service Development plugins.
-- Link to [Cumulocity Provider for CloudStreams](http://techcommunity.softwareag.com/ecosystem/communities/public/webmethods/products/cloudstreams/downloads/Cumulocity/index.html), follow instructions to install to IS.
-- Download and install the lastest HelloDBP package from [IS](IS) folder.
+- Link to [Cumulocity Provider for CloudStreams](http://techcommunity.softwareag.com/ecosystem/communities/public/webmethods/products/cloudstreams/downloads/Cumulocity/index.html), follow instructions in the associated documentation to install to IS.
+- Download and install the latest HelloDBP package from [IS](IS) folder.
 - From Designer Service Development, you'll also have to use File > Sync Document Types > All Out-of-Sync... to sync the two Digital Event Services types to the common repository.
 - Disable and then edit the Cumulocity connector from IS Administration screens to change to your tenant URL, your username and password. It will look something like this:
 ![CumulocityConnector](/images/CumulocityConnector.png)
