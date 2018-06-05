@@ -10,7 +10,7 @@
 - Link to [Elasticsearch Head plugin](https://github.com/mobz/elasticsearch-head), a web front end for Elasticsearch, to browse persisted digital events.
 
 ## Sprint 1 - Cumulocity Trial
-
+To reproduce this sprint demo, you'll need the following:
 - Link to create your own [trial Cumulocity tenant](http://www.cumulocity.com/try-for-free/).
 - Link to [Cloud Sensor App for Android](https://play.google.com/store/apps/details?id=com.cumulocity.cloudsensor&hl=en_US). But you also scan the QR code from the Cockpit "Add Smartphone" wizard.
 - Link to Cloud Sensor App for iPhone (coming soon).
