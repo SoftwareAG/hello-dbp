@@ -126,6 +126,7 @@ To reproduce this sprint, you'll need the following, in addition to everything f
   - `padmin importAlias -u <User> -w <Password> -f "<local git path>\hello-dbp\assets\MashZone\Aliases.zip"`
   - `padmin importDashboard -u <User> -w <Password> -f "<local git path>\hello-dbp\assets\MashZone\Dashboard.zip"`
   - Restart MashZone NextGen. This is needed for the Event Services to restart properly.
+  - Update the URL of EventStore under DataSources in Admin Console and test the connection. Make sure to update  the index “hellodbp” with correct index (default_index).
 
 ## Sprint 11 - IS and AgileApps
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
