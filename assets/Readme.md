@@ -132,8 +132,10 @@ To reproduce this sprint, you'll need the following, in addition to everything f
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
 - AgileApps installed locally or an AgileApps tenant in the public cloud.
 - In the IS package called HelloDBP, edit the HelloDynamicApps > handleThingAlert trigger and enable it.
-- In the IS service called HelloDynamicApps > createThingAlertCase, edit the Flow second MAP step to set your userid and password, e.g.:
+- In the IS service called HelloDynamicApps > createThingAlertCase
+  - edit the Flow second MAP step to set your userid and password, e.g.:
 ![AgileApps_CreateCase](/images/AgileApps_CreateCase.png)
+  - Open pipeline for pub.client:http (create case ) the URL with object name of your AgileApps (hardcoded to Thing_Alert)
 
 ## Sprint 12 - Dynamic Business Orchestrator and AgileApps
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
