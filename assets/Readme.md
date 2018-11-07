@@ -59,6 +59,10 @@ To reproduce this sprint, you'll need the following, in addition to everything f
 ## Sprint 5 - IS and API Gateway
 To reproduce this sprint, you'll need the following, in addition to everything from previous sprints:
 - API Gateway installed, which includes Event Data Store.
+- Use the following URL to import the HelloDBP REST API into Gateway
+```
+http://localhost:5555/invoke/HelloDBP.Utility:getSwagger?RESTDescriptorName=HelloDBP.HelloIS:HelloREST
+```
 - To use the API Key policy, your calling applications must include the HTTP header key `x-Gateway-APIKey` and the actual key generated when creating the new application in API Gateway.
 
 ## Sprint 6 - IS and API Portal
