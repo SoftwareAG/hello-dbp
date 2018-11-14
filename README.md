@@ -16,3 +16,7 @@ If you want to see under the hood, at the DBP assets that make up this demo, plu
 
 # Questions or Feedback
 We are eager to hear if Hello DBP was helpful and how it can be improved or extended. Feel free to email us at [hellodbp@softwareag.com](mailto:hellodbp@softwareag.com).
+______________________
+These tools are provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.	
+
+Contact us at [TECHcommunity](mailto:technologycommunity@softwareag.com?subject=Github/SoftwareAG) if you have any questions.
